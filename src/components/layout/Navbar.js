@@ -8,7 +8,7 @@ const Navbar = props => {
       <nav className=" navbar navbar-expand-sm navbar-dark bg-dark mb-3 py-1 ">
         <div className="container">
           <div className="container ">
-            <a href="/" className="navbar-brand">
+            <a href="/" className="navbar-brand h3">
               {brand}
             </a>
             <button
@@ -22,25 +22,25 @@ const Navbar = props => {
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav mr-auto">
-                <li className="nav-item">
-                  <Link to="/" className="nav-link">
-                    <i className="lni-home"></i> Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/contact/add" className="nav-link">
-                    <i className="lni-add-file"></i>Add
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/about" className="nav-link">
-                    <i className="lni-question-circle"></i> About
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          </div>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul className="navbar-nav mr-auto ">
+              <li className="nav-item">
+                <Link to="/" className="nav-link d-flex">
+                  <i className="lni-home mr-1"> </i>Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/contact/add" className="nav-link d-flex">
+                  <i className="lni-add-file mr-1"></i>Add
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link d-flex">
+                  <i className="lni-question-circle mr-1"></i> About
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -56,8 +56,4 @@ Navbar.propTypes = {
   brand: PropTypes.string.isRequired
 };
 
-// const navstyles = {
-//   color: "white",
-//   fonstSize: "4rem"
-// };
 export default Navbar;
