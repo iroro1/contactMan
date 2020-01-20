@@ -35,22 +35,45 @@ class Contact extends Component {
                 <h4
                   style={{
                     fontSize: "1rem",
-                    cursor: "pointer"
+                    display: "flex",
+                    justifyContent: "space-between"
                   }}
                 >
-                  {name}{" "}
-                  <i
-                    className="lni-angle-double-down text-danger"
-                    onClick={this.showContact}
-                  ></i>
-                  <small>
+                  <div>
+                    {name}{" "}
                     <i
-                      className="lni-close text-danger"
+                      style={{
+                        cursor: "pointer"
+                      }}
+                      className="lni-angle-double-down text-danger"
+                      onClick={this.showContact}
+                    ></i>
+                  </div>
+                  <small
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center"
+                    }}
+                  >
+                    <Link
+                      to={`contact/edit/${id}`}
+                      className="nav-link float-right"
+                    >
+                      <i
+                        style={{
+                          cursor: "pointer"
+                        }}
+                        className="lni-pencil-alt text-dark "
+                      ></i>
+                    </Link>
+                    <i
+                      style={{
+                        cursor: "pointer"
+                      }}
+                      className="lni-close text-danger float-right"
                       onClick={this.delContact.bind(this, id, dispatch)}
                     ></i>
-                    <Link to={`contact/edit/${id}`} className="nav-link">
-                      <i className="lni-pencil-alt text-dark"></i>
-                    </Link>
                   </small>
                 </h4>
                 {showContactBool ? (

@@ -4,40 +4,35 @@ import { Link } from "react-router-dom";
 const Navbar = props => {
   const { brand } = props;
   return (
-    <div className="nav navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0 ">
-      <div className="container ">
-        <Link to="/" className="navbar-brand">
-          {brand}
-        </Link>
-        {/* <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button> */}
-        <div className=" " id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/contact/add" className="nav-link">
-                Add
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/about" className="nav-link">
-                About
-              </Link>
-            </li>
-          </ul>
+    <nav className=" navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-1 ">
+      <div className="container">
+        <div className="container ">
+          <a href="/" className="navbar-brand">
+            {brand}
+          </a>
+
+          <div>
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  <i className="lni-home"></i> Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/contact/add" className="nav-link">
+                  <i className="lni-add-file"></i>Add
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  <i className="lni-question-circle"></i> About
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
     // <div style={navstyles}>
     //   <h1>{brand}</h1>
     // </div>
