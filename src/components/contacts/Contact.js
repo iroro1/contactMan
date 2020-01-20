@@ -78,8 +78,12 @@ class Contact extends Component {
                 </h4>
                 {showContactBool ? (
                   <ul className="list-group">
-                    <li className="list-group-item">Email: {email}</li>
-                    <li className="list-group-item">Phone: {phone}</li>
+                    <li className="list-group-item">
+                      <b>Email:</b> {email}
+                    </li>
+                    <li className="list-group-item">
+                      <b>Phone:</b> {phone}
+                    </li>
                   </ul>
                 ) : null}
               </div>
