@@ -108,7 +108,11 @@ class EditContact extends Component {
                       onChange={this.onChange}
                       error={errors.phone}
                     />
-                    <input type="Update" className="btn btn-block btn-dark" />
+                    <input
+                      type="submit"
+                      value="Update"
+                      className="btn btn-block btn-dark"
+                    />
                   </form>
                 </div>
               </div>
